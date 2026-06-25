@@ -72,6 +72,18 @@ python3 -m venv .venv
 - 模組表合同單號均可對應合同
 ```
 
+### 初始化(建 `.env`)
+
+clone 後互動式建立 `.env`(直接 Enter 即用合成 demo,有真值就填):
+
+```bash
+python scripts/init.py
+```
+
+或在 **Claude Code / Codex** 開這個資料夾,請 AI「初始化」——它會依
+[`AGENTS.md`](AGENTS.md) 的協定設好 venv、再**和你一問一答**填出 `.env`。
+`.env` 是 git-ignored,真值只留本機、永不進版控。
+
 ### 跑真實文件
 
 公開版預設是合成值。要跑真實資料,把 `.env.example` 複製成 git-ignored 的
@@ -154,6 +166,20 @@ python3 -m venv .venv
 A case folder holds one approval (PDF/text), one module-fee table (image/CSV) and
 one to three contracts (PDF). Output is a tiered report (UTF-8 on every platform,
 Windows-ready) — see the sample above.
+
+### Setup (build `.env`)
+
+After cloning, build `.env` interactively (press Enter for the synthetic demo, or
+type real values):
+
+```bash
+python scripts/init.py
+```
+
+Or open the folder in **Claude Code / Codex** and ask the agent to "init" — it
+follows the protocol in [`AGENTS.md`](AGENTS.md): set up the venv, then build
+`.env` with you question-by-question. `.env` is git-ignored — real values stay
+local and never enter version control.
 
 ### Running on a real document set
 
