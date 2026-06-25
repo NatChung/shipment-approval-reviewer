@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+test-data/
+*.prep.png
+*.ocr-page-*.png
+
+# Python build artifacts
+*.egg-info/
+
+# Codegraph local index
+.codegraph/
+
+# Claude Code machine-local (keep skills/ tracked)
+.claude/settings.local.json
+.claude/worktrees/
+
+# Local client config (never commit real identifiers)
+.env
